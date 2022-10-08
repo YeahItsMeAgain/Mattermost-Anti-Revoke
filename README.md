@@ -1,6 +1,10 @@
 # Mattermost - Anti Revoke
 Allows you to see revoked messages on mattermost.
-![example](./assets/example.gif)
+<details>
+  <summary>Demo</summary>
+  
+  ![example](./assets/example.gif)
+</details>
 
 # What's in the repo?
 * [The injected script](./script/antiRevoke.js)
