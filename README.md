@@ -19,9 +19,10 @@ Insert [antiRevoke.user.js](./userscript/antiRevoke.user.js) into the ViolentMon
 
 # Installing the desktop version
 > **Note**  
-> Tested on v5.1.1  
+> Tested on: v5.1.1  
 
 Run [inject.ps1](./desktop/inject.ps1)
 
 # Notes
 * This is not stable! use with caution.
+* Tested on the following server versions: v7.3.0
