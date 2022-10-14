@@ -111,9 +111,9 @@ function onFetchPostsRequestHook(url, data) {
     let added = 0;
     data.order = data.order.reverse();  // Reversing the order to make the code simpler.
     const newOrder = [...data.order];
-    for (let i = 0; i < data.order.length; i++) {
-        const currPost = data.posts[data.order[i]];
-        const nextPost = i + 1 >= data.order.length ? { create_at: Number.MAX_SAFE_INTEGER } : data.posts[data.order[i + 1]];
+    for (let i = -1; i < data.order.length; i++) {
+        const currPost = data.posts[data.order[i]] || { create_at: Number.MIN_SAFE_INTEGER  };
+        const nextPost =  data.posts[data.order[i + 1]] || { create_at: Number.MAX_SAFE_INTEGER };
         channelDeletedPosts.filter(post => {
             return post.create_at >= currPost.create_at && post.create_at < nextPost.create_at;
         })
